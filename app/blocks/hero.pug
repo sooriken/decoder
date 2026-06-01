@@ -1,0 +1,21 @@
+mixin hero
+    section.hero.container(id="hero")
+        .hero__bg
+            picture
+                source(srcset="images-min/hero.webp" type="image/webp")
+                img(src="images-min/hero.jpg" alt="InvestMe exhibition background")
+        .hero__overlay
+        .hero__container.container
+            h1.hero__title InvestMe
+                //picture
+                    source(srcset="images-min/logo.webp" type="image/webp")
+                    img(src="images-min/logo.png" alt="Логотип InvestMe")
+            //</br> Искусство, которое растёт в цене
+            .hero__content
+                p.hero__subtitle Магический блеск </br> финансовых пузырей
+                p.hero__description Бренд одежды и сувениров для инвестеров, трейдеров и людей интересующихся макро экономикой
+                .hero__actions
+                    a.hero__button.button.button--gray(href="#reproductions") Смотреть репродукции
+        a.hero__arrow(href="#mission")
+            svg.hero__arrow-icon(width="40" height="40" viewBox="0 0 40 40")
+                polyline(points="8,18 20,24 32,18" fill="none" stroke="#EEE5D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")

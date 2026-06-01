@@ -1,0 +1,159 @@
+// $colorCream: #EEE5D3
+// $colorCreamLight: #F5EFE3
+// $colorSand: #D2B68A
+// $colorBlack: #000000
+// $colorBlackSoft: #1A1A1A
+// $colorGreenHover: #2B5A42
+  
+$colorGray: #9d9d9d
+$colorGrayLight: #f2f2f2 
+$colorGreenDark: #1A3B2B
+
+$fontAnticva: "Playfair Display", serif
+$fontGrotesk: "Inter", sans-serif
+$fontRusso: "Russo One", sans-serif
+
+// ===== RESET & BASE =====
+*
+  box-sizing: border-box
+
+html
+  font-size: 100%
+  font-family: $fontAnticva
+
+body
+  font-size: 1rem
+
+body, .page, button, input, textarea, select
+  font-family: $fontAnticva
+
+h1, h2, h3, .font-serif
+  font-family: $fontAnticva
+
+.page
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  font-weight: 400
+  line-height: 1.6
+  color: #000
+  background: $colorGrayLight
+
+.content
+  flex-grow: 1
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.title
+  font-family: $fontRusso
+  font-size: 3.5rem
+  line-height: 1.2
+  font-weight: 500
+  text-align: center
+  margin-bottom: 1rem
+  text-transform: uppercase
+
+.subtitle
+  font-family: $fontAnticva
+  font-size: 1.75rem
+  line-height: 1.2
+  color: $colorGray
+  text-align: center
+  font-weight: 500
+  margin-bottom: 3rem
+
+.button
+  display: inline-block
+  padding: 1rem 1.5rem
+  border: 1px solid #000
+  font-family: $fontAnticva
+  background-color: #000
+  color: #fff
+  font-size: 1.6rem
+  font-weight: 500
+  text-decoration: none
+
+  &:hover
+    border-color: $colorGray
+    background-color: $colorGray
+  
+  &--gray
+    background-color: $colorGrayLight
+    color: #000
+    background-color: $colorGrayLight
+    &:hover
+      background-color: $colorGray
+
+a 
+  text-decoration: none
+
+// // ===== CONTAINER =====
+// .container
+//   //max-width: 1600px
+//   margin: 0 auto
+//   padding: 5rem 20rem 5rem 5rem
+
+// ===== FORM ELEMENTS (база) =====
+.input,
+select,
+textarea
+  width: 100%
+  padding: 12px 16px
+  border: 1px solid rgba(#000, 1)
+  background: $colorGrayLight
+  font-family: $fontAnticva
+  font-size: 14px
+  color: #000
+  transition: 0.2s ease
+
+  &:focus
+    outline: none
+    background-color: $colorGray 
+
+  &::placeholder
+    color: $colorGray
+
+textarea
+  resize: vertical
+  min-height: 100px
+
+// ===== LISTS =====
+ul, ol
+  list-style: none
+  padding: 0
+  margin: 0
+
+// ===== TYPOGRAPHY =====
+h1, .h1
+  font-family: $fontAnticva
+  font-size: 6rem
+  line-height: 1.2
+  font-weight: 500
+
+h2, .h2
+  font-family: $fontAnticva
+  font-size: 4rem
+  line-height: 1.2
+  font-weight: 500
+
+h3, .h3
+  font-family: $fontAnticva
+  font-size: 2.4rem
+  line-height: 1.3
+  font-weight: 500
+
+.text-small
+  font-size: 1.4rem
+  line-height: 1.4
+
+.text-micro
+  font-size: 1.2rem
+  line-height: 1.4
+
+.price
+  font-family: $fontAnticva
+  font-size: 2rem
+  font-weight: 600

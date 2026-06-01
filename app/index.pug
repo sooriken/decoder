@@ -1,0 +1,183 @@
+include ./blocks/dipsie
+include ./blocks/header
+include ./blocks/hero
+include ./blocks/mission
+include ./blocks/exhibition
+include ./blocks/reproductions
+include ./blocks/merch
+include ./blocks/originals
+include ./blocks/media
+include ./blocks/feedback
+include ./blocks/footer
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")    
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Gulp
+    // default css
+    link(rel="stylesheet" href="./css-min/default.min.css")
+    // normalize css
+    link(rel="stylesheet" href="./css-min/normalize.min.css")
+    // style css
+    link(rel="stylesheet" href="./css-min/style.min.css")
+    // fonts
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    //link(href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Russo+One&display=swap" rel="stylesheet")
+
+  body
+
+    .container
+
+      header.hero
+        h1 Декодер алгоритмической поэтики
+
+        p
+          | Интерактивный инструмент для анализа влияния рекомендательных алгоритмов
+          br
+          | на структуру научно-популярных видео
+
+      .flex-wrapper
+        // видео
+        section.video-section
+
+            h2 Сравнение версий
+
+            .video-wrapper
+
+              video#comparisonVideo(
+                  controls
+                  preload="metadata"
+              )
+                  source(src="src/video/video.mp4" type="video/mp4")
+
+            .video-captions
+
+              .caption
+                  h3 Контрольная версия
+                  //p Почему небо голубое: линейный разбор
+
+              .caption
+                  h3 Экспериментальная
+                  //p Почему небо голубое: алгоритмическая версия
+
+        // метрика
+        section.retention
+
+            h2 Сравнение кривых удержания
+
+            .chart-wrapper
+
+            svg#retentionChart(
+                viewBox="0 0 1000 400"
+                preserveAspectRatio="none"
+            )
+
+                g#chartGrid
+
+                path#controlLine
+
+                path#experimentLine
+
+                line#retentionCursor(
+                x1="0"
+                y1="0"
+                x2="0"
+                y2="400"
+                )
+
+            p.chart-note
+            | Экспериментальная версия удерживает пороговое значение Retention Rate
+            | в три раза дольше контрольной, что напрямую влияет на попадание
+            | в рекомендации.
+
+      section.timeline
+
+        h2.timeline-title Таймлайн: ключевые моменты
+
+        .timeline-wrapper
+
+          .timeline-row
+
+            .timeline-label Контрольная версия
+
+            .timeline-track#timelineControlTrack
+
+              .marker.green(style="left:0%")
+                .tooltip
+                  strong 0:00–0:04
+                  p Вступление: спикер представляется, говорит «Сегодня я расскажу...»
+
+              .marker.yellow(style="left:40%")
+                .tooltip
+                  strong 0:04–0:20
+                  p Монотонное объяснение без смены плана
+
+              .marker.red(style="left:80%")
+                .tooltip
+                  strong 0:20–0:40
+                  p График Retention падает на 40%
+                
+              .timeline-indicator#timelineControlIndicator
+
+          .timeline-row
+
+            .timeline-label Экспериментальная версия
+
+            .timeline-track#timelineExperimentTrack
+
+              .marker.green(style="left:0%")
+                .tooltip
+                  strong 0:00–0:02
+                  p Аудиовизуальный хук
+
+              .marker.green(style="left:20%")
+                .tooltip
+                  strong 0:02–0:15
+                  p Клиповый монтаж
+
+              .marker.green(style="left:45%")
+                .tooltip
+                  strong 0:15–0:30
+                  p Открытая информационная петля
+
+              .marker.green(style="left:70%")
+                .tooltip
+                  strong 0:30–0:45
+                  p Ответ и призыв к комментарию
+
+              .marker.yellow(style="left:95%")
+                .tooltip
+                  strong 0:45–0:50
+                  p Звуковой джингл
+
+              .timeline-indicator#timelineExperimentIndicator
+
+      section.how
+
+        h2.how-title Как это работает
+
+        .how-grid
+
+          .how-item
+            .icon 📊
+            h3 Кодировочная таблица
+            p Анализ 12 структурных параметров в 50 виральных научпоп-роликах
+
+          .how-item
+            .icon 👥
+            h3 A/B-тестирование
+            p Полевой эксперимент на аудитории 40 000 подписчиков в TikTok
+
+          .how-item
+            .icon ⏱
+            h3 Таймлайн
+            p Визуализация моментов, где алгоритмические паттерны включаются в работу
+
+    script(src="js/main.js")
+
+    script(src="js/main.js")
+script(src="./js-bundle/main.bundle.js")

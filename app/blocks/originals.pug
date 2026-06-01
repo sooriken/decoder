@@ -1,0 +1,16 @@
+mixin originals
+    //- Блок "Оригиналы" (инфо-блок, не продажный)
+    section.originals.container(id="originals")
+        .originals__container
+            .originals__inner
+                .originals__media
+                    picture.originals__picture
+                        source(srcset="images-min/originals/originals-1.webp" type="image/webp")
+                        img.originals__image(src="images-min/originals/originals-1.jpg" alt="Оригинал картины InvestMe")
+                .originals__content
+                    h2.originals__title.title Оригиналы 2023 года
+                    p.originals__description.subtitle
+                        | Уникальные произведения с первой выставки.
+                        | Доступны по запросу для коллекционеров.
+                    .originals__button-inner
+                        a.originals__button.button.button--green(href="#order-form") Узнать о наличии

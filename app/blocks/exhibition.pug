@@ -1,0 +1,20 @@
+mixin exhibition
+    // Блок выставка 2019
+    section.exhibition.container(id="exhibition")
+        .exhibition__container  
+            .exhibition__grid
+                // Левая колонка - текст
+                .exhibition__content
+                    h2.exhibition__title.title Выставка 2023
+                    p.exhibition__description.subtitle
+                        | В 2023 году мы показали 15 работ.
+                        | Сегодня они доступны вам как репродукции и оригиналы.
+                    a.exhibition__link(href="/exhibition-2019.html") Подробнее →
+                
+                // Правая колонка - фото (карусель или сетка 2 фото)
+                .exhibition__images
+                    .exhibition__image-main
+                        img(src="images-min/exhibition/exhibition.jpg", alt="Выставка InvestMe 2019, общий план")
+                    .exhibition__image-secondary
+                        img(src="images-min/exhibition/tulip_mania.jpg", alt="Посетители у картины")
+                        img(src="images-min/exhibition/train_mania.jpg", alt="Посетители у картины")

@@ -1,0 +1,71 @@
+mixin feedback
+    section.feedback.container(id="feedback")
+        .feedback__container
+            .feedback__inner
+                h2.feedback__title.title Форма для заказа
+                p.feedback__subtitle.subtitle Оставьте заявку — мы поможем подобрать репродукцию, мерч или организовать покупку оригинала
+                
+                form.feedback__form(action="https://formspree.io/f/ваш_ид" method="POST")
+                    .feedback__grid
+                        .feedback__field
+                            label.feedback__label Имя
+                            input.feedback__input(type="text" name="name" placeholder="Как к вам обращаться?" required)
+                        
+                        .feedback__field
+                            label.feedback__label Телефон
+                            input.feedback__input(type="tel" name="phone" placeholder="+7 (___) ___-__-__" required)
+                        
+                        .feedback__field
+                            label.feedback__label Телеграм
+                            input.feedback__input(type="text" name="telegram" placeholder="@username")
+                        
+                        .feedback__field
+                            label.feedback__label Товар
+                            .custom-select
+                                .custom-select__trigger
+                                    span.custom-select__selected Выберите товар
+                                    .custom-select__arrow
+                                        svg(width="12" height="8" viewBox="0 0 12 8" fill="none")
+                                        path(d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round")
+                                .custom-select__dropdown
+                                    .custom-select__option(data-value="Репродукция") Репродукция картины
+                                    .custom-select__option(data-value="Футболка с принтом") Футболка с принтом
+                                    .custom-select__option(data-value="Кепка с принтом") Кепка с принтом
+                                    .custom-select__option(data-value="Маска с принтом") Маска с принтом
+                                    .custom-select__option(data-value="Оригинал (запрос)") Оригинал (запрос цены)
+                            input(type="hidden" name="product" class="custom-select__hidden")
+                        
+                        .feedback__field.feedback__field--full
+                            label.feedback__label Размер
+                            .feedback__size-group
+                                label.feedback__size
+                                    input(type="radio" name="size" value="A3")
+                                    span A3
+                                label.feedback__size
+                                    input(type="radio" name="size" value="A2")
+                                    span A2
+                                label.feedback__size
+                                    input(type="radio" name="size" value="A1")
+                                    span A1
+                                label.feedback__size
+                                    input(type="radio" name="size" value="S")
+                                    span S
+                                label.feedback__size
+                                    input(type="radio" name="size" value="M")
+                                    span M
+                                label.feedback__size
+                                    input(type="radio" name="size" value="L")
+                                    span L
+                                label.feedback__size
+                                    input(type="radio" name="size" value="XL")
+                                    span XL
+                                label.feedback__size
+                                    input(type="radio" name="size" value="One size")
+                                    span One size
+                    
+                    .feedback__agree
+                        label.feedback__checkbox
+                            input(type="checkbox" name="agree" required)
+                            span Я согласен на обработку персональных данных
+                        
+                    button.feedback__button.button(type="submit") Отправить заявку

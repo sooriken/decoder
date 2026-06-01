@@ -1,0 +1,248 @@
+@import './blocks/*.sass'
+@import './pages/*.sass'
+
+*
+  box-sizing: border-box
+
+body
+  margin: 0
+  background: #f8fafc
+  color: #111827
+  font-family: Inter, sans-serif
+
+.container
+  width: 1800px
+  margin: 0 auto 
+  padding: 48px
+
+.hero
+  text-align: center
+  margin-bottom: 60px
+
+  h1
+    font-size: 56px
+    margin-bottom: 16px
+
+  p
+    color: #64748b
+    font-size: 20px
+    line-height: 1.5
+
+.videos
+  display: grid
+  grid-template-columns: repeat(2,1fr)
+  gap: 40px
+  margin-bottom: 60px
+
+.video-card
+  h2
+    margin-bottom: 16px
+
+  video
+    width: 100%
+    border-radius: 12px
+    background: #ddd
+
+.video-title
+  margin-top: 12px
+  text-align: center
+
+.retention
+  background: white
+  border-radius: 16px
+  padding: 32px
+  margin-bottom: 60px
+  max-width: 50%
+  margin: 0 auto 60px
+
+  h2
+    text-align: center
+
+.chart-wrapper
+  margin-top: 24px
+
+#retentionChart
+  width: 100%
+  height: 450px
+  cursor: pointer
+  background-image: url(../../../images-min/retention.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+
+#retentionCursor
+  stroke: #111827
+  stroke-width: 2
+
+.chart-note
+  text-align: center
+  max-width: 900px
+  margin: 24px auto 0
+
+.timeline
+  background: white
+  border-radius: 16px
+  padding: 32px
+  margin-bottom: 60px
+
+  &-title
+    margin-bottom: 80px
+
+.timeline-row
+  display: grid
+  grid-template-columns: 220px 1fr
+  gap: 32px
+  margin-bottom: 80px
+
+.timeline-label
+  font-weight: 700
+  line-height: 100px
+  text-wrap: nowrap
+
+.timeline-track
+  position: relative
+  height: 8px
+  background: #cbd5e1
+  border-radius: 100px
+  margin: auto 0
+
+.marker
+  position: absolute
+  top: 50%
+  width: 18px
+  height: 18px
+  border-radius: 50%
+  transform: translate(-50%, -50%)
+  cursor: pointer
+
+.green
+  background: #22c55e
+
+.yellow
+  background: #f59e0b
+
+.red
+  background: #ef4444
+
+.tooltip
+  position: absolute
+  bottom: 30px
+  left: 50%
+  transform: translateX(-50%)
+  width: 250px
+  background: white
+  padding: 12px
+  border-radius: 10px
+  box-shadow: 0 10px 30px rgba(0,0,0,.08)
+
+.timeline-indicator
+  position: absolute
+  top: 50%
+  width: 20px
+  height: 20px
+  background: #2563eb
+  border-radius: 50%
+  transform: translate(-50%, -50%)
+  z-index: 10
+
+.how
+  background: white
+  padding: 32px
+  border-radius: 16px
+
+  &-title
+    text-align: center
+    margin-bottom: 40px
+
+.how-grid
+  display: grid
+  grid-template-columns: repeat(3,1fr)
+  gap: 40px
+
+.how-item
+  text-align: center
+
+.icon
+  font-size: 40px
+  margin-bottom: 12px
+
+
+
+.video-section
+  margin-bottom: 60px
+  max-width: 50%
+  margin: 0 auto
+
+  h2
+    text-align: center
+    margin-bottom: 24px
+
+.video-wrapper
+  background: white
+  border-radius: 16px
+  overflow: hidden
+
+  video
+    width: 100%
+    display: block
+
+.video-captions
+  display: grid
+  grid-template-columns: repeat(2,1fr)
+  gap: 40px
+  margin-top: 20px
+
+.caption
+  text-align: center
+
+.chart-wrapper
+  position: relative
+
+#retentionChart
+  width: 100%
+  height: 450px
+  cursor: pointer
+
+#controlLine
+  fill: none
+  stroke: #2563eb
+  stroke-width: 4
+
+#experimentLine
+  fill: none
+  stroke: #ef4444
+  stroke-width: 4
+
+#retentionCursor
+  stroke: #111827
+  stroke-width: 2
+
+.timeline-track
+  position: relative
+  height: 8px
+  background: #cbd5e1
+  border-radius: 100px
+  cursor: pointer
+
+.timeline-indicator
+  position: absolute
+  top: 50%
+  left: 0
+
+  width: 20px
+  height: 20px
+
+  border-radius: 50%
+
+  background: #2563eb
+
+  transform: translate(-50%, -50%)
+
+  pointer-events: none
+
+  z-index: 20
+
+
+.flex-wrapper
+    display: flex
+    justify-content: space-between
+    gap: 40px
