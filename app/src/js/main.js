@@ -135,3 +135,28 @@ chart.addEventListener(
     setCurrentTime(time)
   }
 )
+
+
+
+
+video.addEventListener('click', () => {
+    video.paused ? video.play() : video.pause();
+});
+
+
+
+
+document.querySelector('[data-copy]').addEventListener('click', function() {
+  const codeBlock = this.previousElementSibling;
+  const text = codeBlock.textContent;
+  
+  navigator.clipboard.writeText(text).then(() => {
+    const originalText = this.textContent;
+    this.textContent = 'Скопировано';
+    this.classList.add('prompt__copy-button--copied');
+    setTimeout(() => {
+      this.textContent = originalText;
+      this.classList.remove('prompt__copy-button--copied');
+    }, 1500);
+  });
+});

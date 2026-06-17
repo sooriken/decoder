@@ -68,15 +68,17 @@ body
   background-image: url(../../../images-min/retention.jpg)
   background-repeat: no-repeat
   background-size: cover
+  overflow: visible
 
 #retentionCursor
   stroke: #111827
   stroke-width: 2
+  transform: translateX(30px)
 
 .chart-note
   text-align: center
   max-width: 900px
-  margin: 24px auto 0
+  margin: 8px auto 0
 
 .timeline
   background: white
@@ -115,20 +117,28 @@ body
   cursor: pointer
 
 .green
-  background: #22c55e
+  background: green
 
 .yellow
-  background: #f59e0b
+  background: yellow
 
 .red
-  background: #ef4444
+  background: red
+
+.orange
+  background: orange
+
+.violet
+  background: violet
 
 .tooltip
   position: absolute
   bottom: 30px
   left: 50%
   transform: translateX(-50%)
-  width: 250px
+  width: auto
+  display: flex
+  flex-direction: column 
   background: white
   padding: 12px
   border-radius: 10px
@@ -161,9 +171,16 @@ body
 .how-item
   text-align: center
 
+.how-text
+  font-family: "Playfair Display", serif
+  font-size: 2.4rem
+  line-height: 1.3
+  font-weight: 500
+
 .icon
   font-size: 40px
   margin-bottom: 12px
+
 
 
 
@@ -246,3 +263,69 @@ body
     display: flex
     justify-content: space-between
     gap: 40px
+
+
+
+
+
+.prompt
+  padding: 60px 20px
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif
+  background-color: #fff
+  margin-top: 60px
+
+.prompt__container
+  max-width: 1800px
+  margin: 0 auto
+
+.prompt__title
+  font-size: 4rem
+  font-weight: 700
+  margin-bottom: 16px
+  letter-spacing: -0.5px
+
+.prompt__description
+  font-size: 16px
+  line-height: 1.6
+  color: #b0b0b0
+  margin-bottom: 32px
+  max-width: 50%
+
+.prompt__code
+  background: #fff
+  border-radius: 12px
+  padding: 28px 24px
+  margin-bottom: 20px
+  overflow-x: auto
+  position: relative
+  font-family: Inter, sans-serif
+
+.prompt__code-block
+  font-size: 16px
+  line-height: 1.7
+  color: #000
+  white-space: pre-wrap
+  word-break: break-word
+  margin: 0
+  font-family: Inter, sans-serif
+
+.prompt__copy-button
+  display: inline-block
+  padding: 12px 28px
+  font-size: 15px
+  font-weight: 500
+  font-family: inherit
+  background: transparent
+  border: 1px solid #3a3a3a
+  border-radius: 8px
+  cursor: pointer
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease
+
+.prompt__copy-button:hover
+  background: rgba(255, 255, 255, 0.05)
+  border-color: #505050
+
+.prompt__copy-button--copied
+  color: #4ade80
+  border-color: #4ade80
+  background: rgba(74, 222, 128, 0.08)
